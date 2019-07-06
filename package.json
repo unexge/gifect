@@ -1,0 +1,27 @@
+{
+  "name": "gifect",
+  "version": "0.0.1",
+  "description": "Make GIFs with React.",
+  "main": "./lib/index.js",
+  "bin": "./lib/bin/gifect.js",
+  "types": "./lib/index.d.ts",
+  "license": "MIT",
+  "author": "unexge <unexge@gmail.com>",
+  "devDependencies": {
+    "@types/puppeteer": "^1.12.4",
+    "@types/react": "^16.8.23",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.2"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "gifencoder": "^2.0.1",
+    "png-js": "^0.1.1",
+    "puppeteer": "^1.18.1"
+  }
+}
