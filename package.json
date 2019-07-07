@@ -1,6 +1,6 @@
 {
   "name": "gifect",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Make GIFs with React.",
   "main": "./lib/index.js",
   "bin": "./lib/bin/gifect.js",

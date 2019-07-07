@@ -62,7 +62,7 @@ Update `src/App.tsx`
 import React from 'react';
 import { Surface, Group, Shape } from 'react-art';
 import Complex from 'complex.js';
-import { Root, withRenderer } from 'gifect';
+import { Root, withRenderer, mapToRange } from 'gifect';
 
 const BG_PATH =
   'M3.00191459,1 C1.34400294,1 0,2.34785514 0,4.00550479 L0,217.994495 C0,219.65439 1.34239483,221 3.00191459,221 L276.998085,221 C278.655997,221 280,219.652145 280,217.994495 L280,4.00550479 C280,2.34561033 278.657605,1 276.998085,1 L3.00191459,1 Z M3.00191459,1';
@@ -85,14 +85,6 @@ const mandelbrotIter = (c: Complex): number => {
 
   return maxIter;
 };
-
-const mapToRange = (
-  x: number,
-  oldMin: number,
-  oldMax: number,
-  newMin: number,
-  newMax: number,
-): number => ((x - oldMin) * (newMax - newMin)) / (oldMax - oldMin) + newMin;
 
 const App: Root = state => {
   const zoom = mapToRange(state.progress, 0, 1, 1, 0.3);
