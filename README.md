@@ -27,9 +27,12 @@ const fps = 10;
 const typer = (message: string, progress: number): string =>
   message.slice(0, message.length * progress);
 
-const App: Root = state => (
-  <div className="App">{typer('gifect', state.progress)}</div>
-);
+const App: Root = state => {
+  // state.progress is the percentage of completion it is between 0 and 1
+  // you should return desired frame for that percentage of animation.
+
+  return <div className="App">{typer('gifect', state.progress)}</div>;
+};
 
 export default withRenderer(App, {
   width: 45,
